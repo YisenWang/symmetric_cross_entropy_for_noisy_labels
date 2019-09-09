@@ -16,7 +16,7 @@ import tensorflow as tf
 from util import get_lr_scheduler
 from datasets import get_data
 from models import get_model
-from loss import symmetric_cross_entropy
+from loss import symmetric_cross_entropy, cross_entropy, lsr, joint_optimization_loss, generalized_cross_entropy, boot_soft, boot_hard, forward, backward
 from callback_util import LoggerCallback, SGDLearningRateTracker
 
 
@@ -53,12 +53,25 @@ def train(dataset='mnist', model_name='sl', batch_size=128, epochs=50, noise_rat
 
     optimizer = SGD(lr=0.1, decay=5e-3, momentum=0.9)
 
-
     # create loss
     if model_name == 'ce':
         loss = cross_entropy
     elif model_name =='sl':
         loss = symmetric_cross_entropy(alpha,beta)
+    elif model_name == 'lsr':
+        loss = lsr
+    elif model_name =='joint':
+        loss = joint_optimization_loss
+    elif model_name =='gce':
+        loss = generalized_cross_entropy
+    elif model_name == 'boot_hard':
+        loss = boot_hard
+    elif model_name == 'boot_soft':
+        loss = boot_soft
+    elif model_name == 'forward':
+        loss = forward(P)
+    elif model_name == 'backward':
+        loss = backward(P)
     else:
         print("Model %s is unimplemented!" % model_name)
         exit(0)
