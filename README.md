@@ -7,5 +7,6 @@ Code for ICCV2019 "Symmetric Cross Entropy for Robust Learning with Noisy Labels
 - Keras 2.2.2
 
 ## Usage
+Simply run the code by python3 train_models.py
 
-Simply run the code by: python3 train_models.py
+It can config with dataset, model, epoch, batchsize, noise_rate, symmetric or asymmetric type noise
