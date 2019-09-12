@@ -51,7 +51,10 @@ def train(dataset='mnist', model_name='sl', batch_size=128, epochs=50, noise_rat
     model = get_model(dataset, input_tensor=None, input_shape=image_shape, num_classes=num_classes)
     # model.summary()
 
-    optimizer = SGD(lr=0.1, decay=5e-3, momentum=0.9)
+    if dataset == 'cifar-100':
+        optimizer = SGD(lr=0.1, decay=5e-3, momentum=0.9)
+    else:
+        optimizer = SGD(lr=0.1, decay=1e-4, momentum=0.9)
 
     # create loss
     if model_name == 'ce':
