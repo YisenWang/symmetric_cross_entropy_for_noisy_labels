@@ -1,5 +1,5 @@
 # Symmetric Cross Entropy Learning (SL)
-Code for ICCV2019 "Symmetric Cross Entropy for Robust Learning with Noisy Labels" {https://arxiv.org/abs/1908.06112}
+Code for ICCV2019 "Symmetric Cross Entropy for Robust Learning with Noisy Labels" https://arxiv.org/abs/1908.06112
 
 ## Requirements
 - Python 3.5.2
