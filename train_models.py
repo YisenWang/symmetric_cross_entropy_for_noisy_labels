@@ -46,7 +46,10 @@ def train(dataset='mnist', model_name='sl', batch_size=128, epochs=50, noise_rat
     image_shape = X_train.shape[1:]
     num_classes = y_train.shape[1]
     print("n_images", n_images, "num_classes", num_classes, "image_shape:", image_shape)
-
+    
+    # define P for forward and backward loss
+    P = np.eye(num_classes)
+    
     # load model
     model = get_model(dataset, input_tensor=None, input_shape=image_shape, num_classes=num_classes)
     # model.summary()
