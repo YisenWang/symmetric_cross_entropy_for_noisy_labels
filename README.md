@@ -10,3 +10,5 @@ Code for ICCV2019 "Symmetric Cross Entropy for Robust Learning with Noisy Labels
 Simply run the code by python3 train_models.py
 
 It can config with dataset, model, epoch, batchsize, noise_rate, symmetric or asymmetric type noise
+
+The other replication can be found here: https://github.com/HanxunHuangLemonBear/SCELoss-Reproduce
