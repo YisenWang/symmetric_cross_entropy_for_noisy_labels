@@ -13,3 +13,15 @@ It can config with dataset, model, epoch, batchsize, noise_rate, symmetric or as
 
 ## The other replication
 The reprocuded results by Hanxun Huang are slightly better for all methods. The code can be found here: https://github.com/HanxunHuangLemonBear/SCELoss-Reproduce
+
+## Citing this work
+If you use this code in your work, please cite the accompanying paper:
+
+```
+@inproceedings{wang2019symmetric,
+  title={Symmetric cross entropy for robust learning with noisy labels},
+  author={Wang, Yisen and Ma, Xingjun and Chen, Zaiyi and Luo, Yuan and Yi, Jinfeng and Bailey, James},
+  booktitle={IEEE International Conference on Computer Vision},
+  year={2019}
+}
+```
