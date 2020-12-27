@@ -11,8 +11,8 @@ Simply run the code by python3 train_models.py
 
 It can config with dataset, model, epoch, batchsize, noise_rate, symmetric or asymmetric type noise
 
-## The other replication
-The reprocuded results by Hanxun Huang are slightly better for all methods. The code can be found here: https://github.com/HanxunHuangLemonBear/SCELoss-Reproduce
+## The Pytorch reimplementation
+The Pytorch version is implemented by Hanxun Huang. The code can be found here: https://github.com/HanxunHuangLemonBear/SCELoss-Reproduce
 
 ## Citing this work
 If you use this code in your work, please cite the accompanying paper:
